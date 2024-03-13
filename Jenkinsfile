@@ -1,5 +1,5 @@
 pipeline{
-    agent any
+    agent { label 'jenkins-woker-node' }
     triggers { pollSCM 'H/5 * * * *' }
     stages{
         stage('clone'){
