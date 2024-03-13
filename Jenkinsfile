@@ -1,8 +1,6 @@
 pipeline{
     agent none
-    triggers{
-        pollscm('* * * * * *')
-    }
+    triggers { pollSCM 'H/5 * * * *' }
     stages{
         stage('clone'){
             steps{
