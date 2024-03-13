@@ -8,12 +8,12 @@ pipeline{
                 branch:'main'
             }
         }
-        stage('build'){
-            steps{
-                sh 'mvn clean package'
-                archiveArtifacts artifacts: '/spring-petclinic-*.jar'
-                junit testResults:'**/TEST-*.xml'
-            }
-        }
+        // stage('build'){
+        //     steps{
+        //         sh 'mvn clean package'
+        //         archiveArtifacts artifacts: '/spring-petclinic-*.jar'
+        //         junit testResults:'**/TEST-*.xml'
+        //     }
+        // }
     }
 }
